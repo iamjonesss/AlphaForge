@@ -1,16 +1,16 @@
-# 🧱 AlphaForge – Gerador de Estrutura de Projetos para VS Code
+# 🧱 AlphaForge – Project Structure Generator for VS Code
 
-**AlphaForge** é uma extensão para o Visual Studio Code que permite criar, salvar e aplicar modelos personalizados de estrutura de projetos com apenas alguns cliques. Ideal pra quem quer manter **padrões de projeto**, **agilizar o setup** e **padronizar entre equipes**.
-
----
-
-## ✨ Funcionalidades
-
-- 🔧 Crie seus próprios templates com pastas e arquivos customizados.
-- 💾 Salve esses modelos localmente como JSON.
-- 🚀 Gere a estrutura completa de um projeto com apenas um comando.
-- 🗂 Organize múltiplos modelos (ex: "Projeto Python", "API Node", "App React Native").
+**AlphaForge** is a Visual Studio Code extension that lets you create, save, and apply custom project structure templates with just a few clicks. Perfect for those who want to keep **project standards**, **speed up setup**, and **standardize across teams**.
 
 ---
 
-## 🚧 No processo de desenvolvimento...
+## ✨ Features
+
+- 🔧 Create your own templates with custom folders and files.  
+- 💾 Save these templates locally as JSON.  
+- 🚀 Generate the complete structure of a project with a single command.  
+- 🗂 Organize multiple templates (e.g., "Python Project", "Node API", "React Native App").  
+
+---
+
+## 🚧 Work in Progress...
