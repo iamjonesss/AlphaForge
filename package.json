@@ -11,13 +11,31 @@
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
+  "icon": "assets/icon_alphaforge.png",
   "contributes": {
     "commands": [
       {
         "command": "alphaforge.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "alphaforge-sidebar",
+          "title": "AlphaForge",
+          "icon": "assets/icon_alphaforge.png"
+        }
+      ]
+    },
+    "views": {
+      "alphaforge-sidebar": [
+        {
+          "id": "alphaforge-view",
+          "name": "Project Templates"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
