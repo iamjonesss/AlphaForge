@@ -9,7 +9,6 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./out/extension.js",
   "icon": "assets/icon_alphaforge.png",
   "contributes": {
@@ -32,7 +31,9 @@
       "alphaforge-sidebar": [
         {
           "id": "alphaforge-view",
-          "name": "Project Templates"
+          "name": "Project Templates",
+          "type": "webview",
+          "icon": "assets/icon_alphaforge.png"
         }
       ]
     }
