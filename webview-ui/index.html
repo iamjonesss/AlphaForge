@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src {{cspSource}}; script-src {{cspSource}};">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{stylesUri}}" rel="stylesheet">
+    <title>AlphaForge</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AlphaForge</h1>
+            <p class="subtitle">Criador de Templates de Projeto</p>
+        </header>
+
+        <section class="section">
+            <h2>Criar Novo Template</h2>
+            
+            <div class="form-group">
+                <label for="templateName">Nome do Template:</label>
+                <input type="text" id="templateName" placeholder="Ex: React App, Node API, Python Project">
+            </div>
+
+            <div class="form-group">
+                <label for="templateDescription">Descrição:</label>
+                <textarea id="templateDescription" rows="2" placeholder="Descrição breve do template..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="templateStructure">Estrutura (JSON):</label>
+                <textarea id="templateStructure" rows="12" placeholder='{
+  "src": {
+    "index.js": "console.log(\"Hello World\");",
+    "components": {},
+    "utils": {
+      "helpers.js": "// Helper functions"
+    }
+  },
+  "README.md": "# My Project",
+  "package.json": "{}"
+}'></textarea>
+                <small class="hint">📖 Dica: Pastas são objetos vazios {}, arquivos são strings com conteúdo</small>
+            </div>
+
+            <button id="saveTemplateBtn" class="btn btn-primary">💾 Salvar Template</button>
+        </section>
+
+        <!-- Seção: Templates Salvos -->
+        <section class="section">
+            <h2>📚 Templates Salvos</h2>
+            <div id="templatesList" class="templates-list">
+                <p class="empty-state">Nenhum template salvo ainda. Crie seu primeiro template acima!</p>
+            </div>
+        </section>
+
+        <!-- Seção: Aplicar Template -->
+        <section class="section">
+            <h2>🚀 Aplicar Template</h2>
+            <div class="form-group">
+                <label for="targetFolder">Pasta de Destino:</label>
+                <div class="input-with-button">
+                    <input type="text" id="targetFolder" placeholder="Caminho da pasta (ou deixe vazio para a pasta atual)" readonly>
+                    <button id="selectFolderBtn" class="btn btn-secondary">📁 Selecionar</button>
+                </div>
+            </div>
+            <button id="applyTemplateBtn" class="btn btn-success" disabled>✨ Aplicar Template Selecionado</button>
+        </section>
+    </div>
+
+    <script src="{{scriptUri}}"></script>
+</body>
+</html>
