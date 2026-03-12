@@ -1,0 +1,11 @@
+{
+  "name": "Teste de criação via input",
+  "description": "",
+  "structure": {
+    "src": {
+      "index.html": "<p>Hello World!<p> ",
+      "teste.py": "print('Hello World!')"
+    }
+  },
+  "createdAt": "2026-03-12T17:11:46.507Z"
+}
