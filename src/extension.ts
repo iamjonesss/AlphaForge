@@ -119,14 +119,34 @@ export class AlphaForgeProvider implements vscode.WebviewViewProvider {
 	private async handleDeleteTemplate(name: string) {
 		try {
 			const filePath = path.join(this.templatesPath, `${name}.json`);
-			if (fs.existsSync(filePath)) {
-				fs.unlinkSync(filePath);
-				this._view?.webview.postMessage({
-					command: 'templateDeleted',
-					data: { name }
-				});
-				vscode.window.showInformationMessage(`Template "${name}" deletado com sucesso!`);
+			if (!fs.existsSync(filePath)) {
+				vscode.window.showErrorMessage('Template não encontrado!');
+				return;
 			}
+
+			// Mostrar confirmação antes de deletar
+			const confirm = await vscode.window.showWarningMessage(
+				`Tem certeza que deseja deletar o template "${name}"?`,
+				{ modal: true },
+				'Sim',
+				'Não'
+			);
+
+			if (confirm !== 'Sim') {
+				return;
+			}
+
+			fs.unlinkSync(filePath);
+			
+			this._view?.webview.postMessage({
+				command: 'templateDeleted',
+				data: { name }
+			});
+			
+			vscode.window.showInformationMessage(`Template "${name}" deletado com sucesso!`);
+			
+			// Recarregar lista de templates
+			await this.handleGetTemplates();
 		} catch (error) {
 			vscode.window.showErrorMessage(`Erro ao deletar template: ${error}`);
 		}

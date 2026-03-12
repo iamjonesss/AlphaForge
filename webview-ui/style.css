@@ -259,3 +259,180 @@ header h1 {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--vscode-scrollbarSlider-hoverBackground);
 }
+
+/* Structure Builder */
+.structure-builder {
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 4px;
+    background-color: var(--vscode-editor-background);
+    overflow: hidden;
+}
+
+.builder-toolbar {
+    padding: 12px;
+    background-color: var(--vscode-sideBarSectionHeader-background);
+    border-bottom: 1px solid var(--vscode-panel-border);
+    display: flex;
+    gap: 8px;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.structure-tree {
+    padding: 12px;
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.empty-structure {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--vscode-descriptionForeground);
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* Tree Item */
+.tree-item {
+    margin-bottom: 8px;
+}
+
+.tree-item-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    background-color: var(--vscode-input-background);
+    border: 1px solid var(--vscode-input-border);
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.tree-item-header:hover {
+    background-color: var(--vscode-list-hoverBackground);
+}
+
+.tree-toggle {
+    cursor: pointer;
+    user-select: none;
+    width: 14px;
+    font-size: 10px;
+    color: var(--vscode-foreground);
+}
+
+.tree-spacer {
+    width: 14px;
+}
+
+.tree-icon {
+    font-size: 14px;
+}
+
+.tree-name-input {
+    flex: 1;
+    padding: 4px 8px;
+    background-color: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-family: var(--vscode-editor-font-family);
+    font-size: 12px;
+}
+
+.tree-name-input:focus {
+    outline: none;
+    border-color: var(--vscode-focusBorder);
+}
+
+.tree-actions {
+    display: flex;
+    gap: 2px;
+}
+
+.btn-icon-small {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: var(--vscode-foreground);
+    font-weight: bold;
+}
+
+.btn-icon-small:hover {
+    background-color: var(--vscode-toolbar-hoverBackground);
+}
+
+.btn-remove:hover {
+    color: #f48771;
+}
+
+.tree-item-content {
+    margin-top: 6px;
+    margin-left: 20px;
+}
+
+.file-content-input {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    border: 1px solid var(--vscode-input-border);
+    border-radius: 4px;
+    font-family: var(--vscode-editor-font-family);
+    font-size: 12px;
+    resize: vertical;
+    min-height: 60px;
+}
+
+.file-content-input:focus {
+    outline: 1px solid var(--vscode-focusBorder);
+    border-color: var(--vscode-focusBorder);
+}
+
+/* Add Child Popup */
+.add-child-popup {
+    position: absolute;
+    display: flex;
+    gap: 4px;
+    background-color: var(--vscode-editorWidget-background);
+    border: 1px solid var(--vscode-editorWidget-border);
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 4px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup-btn {
+    padding: 6px 12px;
+    border: none;
+    background-color: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.popup-btn:hover {
+    background-color: var(--vscode-button-secondaryHoverBackground);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--vscode-editor-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--vscode-scrollbarSlider-background);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--vscode-scrollbarSlider-hoverBackground);
+}
