@@ -192,7 +192,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 Desenvolvido com ❤️ por João Souza!
 
 - GitHub: [@iamjonesss](https://github.com/iamjonesss)
-- LinkedIn: [Seu Perfil](https://linkedin.com/in/iamjonesss)
+- LinkedIn: [iamjonesss](https://linkedin.com/in/iamjonesss)
 
 ---
 
