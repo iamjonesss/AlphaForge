@@ -352,12 +352,10 @@
 
     // Função: Deletar Template
     function deleteTemplate(name) {
-        if (confirm(`Tem certeza que deseja deletar o template "${name}"?`)) {
-            vscode.postMessage({
-                command: 'deleteTemplate',
-                data: { name }
-            });
-        }
+        vscode.postMessage({
+            command: 'deleteTemplate',
+            data: { name }
+        });
     }
 
     // Função: Mostrar erro

@@ -29,13 +29,6 @@ Perfeito para desenvolvedores que trabalham com múltiplos frameworks, linguagen
 
 ## ✨ Principais Recursos
 
-### 🎨 Interface Visual Intuitiva
-Esqueça edição manual de JSON! Crie sua estrutura de projeto usando um formulário amigável:
-- **Adicione pastas e arquivos** com botões dedicados
-- **Organize hierarquicamente** com suporte a estruturas aninhadas
-- **Preencha conteúdo inicial** diretamente em cada arquivo
-- **Visualize em tempo real** a estrutura sendo criada
-
 ### 📦 Gerenciamento de Templates
 - Salve quantos templates quiser localmente
 - Visualize todos os templates salvos com nome, descrição e data de criação
