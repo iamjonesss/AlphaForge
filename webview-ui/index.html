@@ -40,7 +40,10 @@
                 </div>
             </div>
 
-            <button id="saveTemplateBtn" class="btn btn-primary">💾 Salvar Template</button>
+            <div class="template-form-actions">
+                <button id="saveTemplateBtn" class="btn btn-primary">💾 Salvar Template</button>
+                <button id="cancelEditBtn" class="btn btn-secondary" type="button" style="display: none;">Cancelar edição</button>
+            </div>
         </section>
 
         <!-- Seção: Templates Salvos -->
@@ -65,6 +68,12 @@
         </section>
     </div>
 
+    <script src="{{vscodeMessengerUri}}"></script>
+    <script src="{{templateStateUri}}"></script>
+    <script src="{{templateStructureServiceUri}}"></script>
+    <script src="{{structureTreeControllerUri}}"></script>
+    <script src="{{templatesListControllerUri}}"></script>
+    <script src="{{alphaForgeAppUri}}"></script>
     <script src="{{scriptUri}}"></script>
 </body>
 </html>
