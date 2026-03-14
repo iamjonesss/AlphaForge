@@ -194,6 +194,13 @@ header h1 {
     gap: 12px;
 }
 
+.templates-toolbar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
 .empty-state {
     text-align: center;
     padding: 40px 20px;
