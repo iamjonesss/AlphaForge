@@ -21,6 +21,8 @@
         bindStaticEvents() {
             this.elements.saveTemplateBtn.addEventListener('click', () => this.handleSaveTemplate());
             this.elements.cancelEditBtn.addEventListener('click', () => this.exitEditMode());
+            this.elements.importTemplateBtn.addEventListener('click', () => this.handleImportTemplate());
+            this.elements.exportTemplateBtn.addEventListener('click', () => this.handleExportTemplate());
             this.elements.selectFolderBtn.addEventListener('click', () => this.handleSelectFolder());
             this.elements.applyTemplateBtn.addEventListener('click', () => this.handleApplyTemplate());
             this.elements.addFolderBtn.addEventListener('click', () => {
@@ -57,6 +59,13 @@
                         this.messenger.showInfo('Template deletado com sucesso!');
                         this.handleTemplateDeleted(message.data.name);
                         this.loadTemplates();
+                        break;
+                    case 'templateImported':
+                        this.messenger.showInfo(`Template "${message.data.name}" importado com sucesso!`);
+                        this.loadTemplates();
+                        break;
+                    case 'templateExported':
+                        this.messenger.showInfo(`Template "${message.data.name}" exportado para: ${message.data.path}`);
                         break;
                     case 'folderSelected':
                         this.state.targetFolderPath = message.data.path;
@@ -120,6 +129,21 @@
 
         handleSelectFolder() {
             this.messenger.post('selectFolder');
+        }
+
+        handleImportTemplate() {
+            this.messenger.post('importTemplate');
+        }
+
+        handleExportTemplate() {
+            if (!this.state.selectedTemplate) {
+                this.messenger.showError('Selecione um template para exportar.');
+                return;
+            }
+
+            this.messenger.post('exportTemplate', {
+                name: this.state.selectedTemplate.name
+            });
         }
 
         handleApplyTemplate() {

@@ -12,6 +12,8 @@
         templateDescription: getRequiredElement('templateDescription'),
         saveTemplateBtn: getRequiredElement('saveTemplateBtn'),
         cancelEditBtn: getRequiredElement('cancelEditBtn'),
+        importTemplateBtn: getRequiredElement('importTemplateBtn'),
+        exportTemplateBtn: getRequiredElement('exportTemplateBtn'),
         templatesList: getRequiredElement('templatesList'),
         selectFolderBtn: getRequiredElement('selectFolderBtn'),
         targetFolder: getRequiredElement('targetFolder'),
