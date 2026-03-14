@@ -1,6 +1,7 @@
 {
   "name": "alphaforge",
   "displayName": "AlphaForge",
+  "publisher": "Jonesdev",
   "description": "Precisa de um criador de template para projetos? A AlphaForge é a melhor opção!",
   "version": "0.0.1",
   "license": "MIT",

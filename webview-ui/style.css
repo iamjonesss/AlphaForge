@@ -143,6 +143,12 @@ header h1 {
     background-color: var(--vscode-button-secondaryHoverBackground);
 }
 
+.template-form-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
 .btn-success {
     background-color: #0e7d0e;
     color: white;
